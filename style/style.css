@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "PlaypenSans";
+    src: url(../font/PlaypenSans-Medium.ttf),format(ttf);
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -206,8 +211,9 @@ body{
 }
 
 .header-bottom-title{
-    font-size: 80px;
-    font-weight: bold;
+    font-size: 64px;
+    font-family: "PlaypenSans";
+    /* font-weight: bold; */
 }
 
 .header-content-wraper{
@@ -1219,13 +1225,14 @@ textarea::placeholder{
         position: fixed;
         left: 0;
         right: 0;
-        top: -70px;
+        top: 63px;
+        height: 0;
         flex-direction: column;
         align-items: start;
-        padding: 1rem;
+        padding: 0 1rem;
         background-color: #f6f6f6bd;
         backdrop-filter: blur(5px);
-        transform: scaleY(0);
+        overflow: hidden;
         transition: all .5s;
         z-index: 999;
     }
@@ -1237,15 +1244,15 @@ textarea::placeholder{
     .nav-list .nav-link {
         color: #4e4e4e;
     }
-
+    
     .nav-list .nav-link::after{
         bottom: 0;
     }
-
+    
     .nav-bar input[type="checkbox"]:checked ~ .nav-list {
-        left: 0;
-        top: 63px;
-        transform: scaleY(1);
+        height: auto;
+        overflow: visible;
+        padding: 1rem !important;
     }
 
     .nav-bar label {
